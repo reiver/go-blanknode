@@ -140,6 +140,24 @@ func (receiver Identifier) MarshalText() (text []byte, err error) {
 	return []byte(receiver.String()), nil
 }
 
+func MustParseIdentifierBytes(value []byte) Identifier {
+	identifier, err := ParseIdentifierBytes(value)
+	if nil != err {
+		panic(err)
+	}
+
+	return identifier
+}
+
+func MustParseIdentifierString(value string) Identifier {
+	identifier, err := ParseIdentifierString(value)
+	if nil != err {
+		panic(err)
+	}
+
+	return identifier
+}
+
 // String makes [Identifier] fit [fmt.Stringer].
 func (receiver Identifier) String() string {
 	return IdentifierPrefix + receiver.label.String()

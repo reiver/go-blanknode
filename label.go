@@ -274,6 +274,24 @@ func (receiver Label) MarshalText() (text []byte, err error) {
 	return []byte(value), nil
 }
 
+func MustParseLabelBytes(value []byte) Label {
+	label, err := ParseLabelBytes(value)
+	if nil != err {
+		panic(err)
+	}
+
+	return label
+}
+
+func MustParseLabelString(value string) Label {
+	label, err := ParseLabelString(value)
+	if nil != err {
+		panic(err)
+	}
+
+	return label
+}
+
 // String makes [Label] fit [fmt.Stringer].
 func (receiver Label) String() string {
 	return receiver.optional.GetElse("")
