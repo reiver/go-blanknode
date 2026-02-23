@@ -6,7 +6,18 @@ import (
 	"unsafe"
 )
 
-const prefix string = "_:"
+// IdentifierPrefix is the prefix at the beginning of all blank-node-identifiers.
+//
+// It makes blank-node-identifiers look like a URL/URI/IRI with a scheme of "_".
+//
+// You can see the prefix in these example blank-node-identifiers:
+//
+//	_:b0
+//	_:address84
+//	_:n1
+//	_:ed7ba470-8e54-465e-825c-99712043e01c
+//	_:label123
+const IdentifierPrefix string = "_:"
 
 // Identifier represents a blank-node-identifier from RDF (resource description framework) technologies, such as:
 // JSON-LD,
@@ -64,11 +75,11 @@ func ParseIdentifierString(value string) (Identifier, error) {
 	var str string
 
 	{
-		if !strings.HasPrefix(value, prefix) {
+		if !strings.HasPrefix(value, IdentifierPrefix) {
 			return Identifier{}, ErrIdentifierPrefixNotFound
 		}
 
-		str = str[len(prefix):]
+		str = str[len(IdentifierPrefix):]
 	}
 
 	label, err := ParseLabelString(str)
@@ -100,7 +111,7 @@ func (receiver Identifier) Get() (string, bool) {
 		return "", false
 	}
 
-	return prefix + label, true
+	return IdentifierPrefix + label, true
 }
 
 func (receiver Identifier) IsNothing() bool {
@@ -123,7 +134,7 @@ func (receiver Identifier) MarshalText() (text []byte, err error) {
 
 // String makes [Identifier] fit [fmt.Stringer].
 func (receiver Identifier) String() string {
-	return prefix + receiver.label.String()
+	return IdentifierPrefix + receiver.label.String()
 }
 
 // UnmarshalText makes [Identifier] fit [encoding.TextUnmarshaler].
