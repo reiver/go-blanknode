@@ -1,4 +1,4 @@
-package blanknodeid
+package blanknode
 
 import (
 	"codeberg.org/reiver/go-erorr"

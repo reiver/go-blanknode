@@ -1,6 +1,6 @@
-# go-blanknodeid
+# go-blanknode
 
-Package **blanknodeid** provides tools for working with **blank node identifiers**, for the Go programming language.
+Package **blanknode** provides tools for working with **blank node identifiers**, for the Go programming language.
 
 **Blank Node Identifiers** are used in **RDF** (**resource description framework**) technologies, such as:
 JSON-LD,
@@ -14,24 +14,24 @@ etc.
 
 ## Documention
 
-Online documentation, which includes examples, can be found at: http://godoc.org/github.com/reiver/go-blanknodeid
+Online documentation, which includes examples, can be found at: http://godoc.org/github.com/reiver/go-blanknode
 
-[![GoDoc](https://godoc.org/github.com/reiver/go-blanknodeid?status.svg)](https://godoc.org/github.com/reiver/go-blanknodeid)
+[![GoDoc](https://godoc.org/github.com/reiver/go-blanknode?status.svg)](https://godoc.org/github.com/reiver/go-blanknode)
 
 ## Import
 
-To import package **blanknodeid** use `import` code like the following:
+To import package **blanknode** use `import` code like the following:
 ```
-import "github.com/reiver/go-blanknodeid"
+import "github.com/reiver/go-blanknode"
 ```
 
 ## Installation
 
-To install package **blanknodeid** do the following:
+To install package **blanknode** do the following:
 ```
-GOPROXY=direct go get github.com/reiver/go-blanknodeid
+GOPROXY=direct go get github.com/reiver/go-blanknode
 ```
 
 ## Author
 
-Package **blanknodeid** was written by [Charles Iliya Krempeaux](http://reiver.link)
+Package **blanknode** was written by [Charles Iliya Krempeaux](http://reiver.link)

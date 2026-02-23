@@ -1,4 +1,4 @@
-package blanknodeid
+package blanknode
 
 import (
 	"encoding"
