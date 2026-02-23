@@ -1,8 +1,8 @@
 # go-blanknode
 
-Package **blanknode** provides tools for working with **blank node identifiers**, for the Go programming language.
+Package **blanknode** provides tools for working with **blank node identifiers** and **blank node labels**, for the Go programming language.
 
-**Blank Node Identifiers** are used in **RDF** (**resource description framework**) technologies, such as:
+**Blank Node Identifiers** and **Blank Node Labels** are used in **RDF** (**resource description framework**) technologies, such as:
 JSON-LD,
 N-Quads,
 N-Triples,
