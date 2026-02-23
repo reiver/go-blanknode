@@ -1,4 +1,4 @@
-module github.com/reiver/go-blanknodeid
+module github.com/reiver/go-blanknode
 
 go 1.25.4
 
