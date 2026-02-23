@@ -39,7 +39,6 @@ import (
 //
 // I.e., a Blank Node Label is the part of the Blank Node Identifier after the "_:".
 type Label struct {
-
 	optional opt.Optional[string]
 }
 
@@ -266,6 +265,10 @@ func ParseLabelString(value string) (Label, error) {
 	return someLabel(value), nil
 }
 
+func (receiver Label) IsNothing() bool {
+	return receiver.optional.IsNothing()
+}
+
 // MarshalText makes [Label] fit [encoding.TextMarshaler].
 func (receiver Label) MarshalText() (text []byte, err error) {
 	value, found := receiver.optional.Get()
@@ -276,7 +279,7 @@ func (receiver Label) MarshalText() (text []byte, err error) {
 	return []byte(value), nil
 }
 
-// String makes [Label] if [fmt.Stringer].
+// String makes [Label] fit [fmt.Stringer].
 func (receiver Label) String() string {
 	return receiver.optional.GetElse("")
 }
