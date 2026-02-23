@@ -19,6 +19,14 @@ import (
 //	_:label123
 const IdentifierPrefix string = "_:"
 
+// HasIdentifierPrefix return whether a string beings with a "_:" or not.
+//
+// All blank-node-identifiers begin with a "_:".
+func HasIdentifierPrefix(value string) bool {
+	return strings.HasPrefix(value, IdentifierPrefix)
+
+}
+
 // Identifier represents a blank-node-identifier from RDF (resource description framework) technologies, such as:
 // JSON-LD,
 // N-Quads,
@@ -75,7 +83,7 @@ func ParseIdentifierString(value string) (Identifier, error) {
 	var str string
 
 	{
-		if !strings.HasPrefix(value, IdentifierPrefix) {
+		if !HasIdentifierPrefix(value) {
 			return Identifier{}, ErrIdentifierPrefixNotFound
 		}
 
