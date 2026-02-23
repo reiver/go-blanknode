@@ -19,10 +19,20 @@ import (
 //	_:label123
 const IdentifierPrefix string = "_:"
 
-// HasIdentifierPrefix return whether a string beings with a "_:" or not.
+// HasIdentifierPrefixBytes return whether a []byte begins with a "_:" or not.
 //
 // All blank-node-identifiers begin with a "_:".
-func HasIdentifierPrefix(value string) bool {
+func HasIdentifierPrefixBytes(value []byte) bool {
+	var str string = unsafe.String(unsafe.SliceData(value), len(value))
+
+	return HasIdentifierPrefixString(str)
+
+}
+
+// HasIdentifierPrefixString return whether a string begins with a "_:" or not.
+//
+// All blank-node-identifiers begin with a "_:".
+func HasIdentifierPrefixString(value string) bool {
 	return strings.HasPrefix(value, IdentifierPrefix)
 
 }
@@ -83,7 +93,7 @@ func ParseIdentifierString(value string) (Identifier, error) {
 	var str string
 
 	{
-		if !HasIdentifierPrefix(value) {
+		if !HasIdentifierPrefixString(value) {
 			return Identifier{}, ErrIdentifierPrefixNotFound
 		}
 
