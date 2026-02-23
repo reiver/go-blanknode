@@ -111,9 +111,6 @@ func someLabel(value string) Label {
 //
 // ( https://www.w3.org/TR/turtle/#grammar-production-PN_CHARS_BASE )
 //
-// The specification seems to have an error in it.
-// As it is missing [0-9], so that was added, too.
-//
 // See also: [ParseLabelString].
 func ParseLabelBytes(value []byte) (Label, error) {
 	var str string = unsafe.String(unsafe.SliceData(value), len(value))
@@ -171,9 +168,6 @@ func ParseLabelBytes(value []byte) (Label, error) {
 //
 // ( https://www.w3.org/TR/turtle/#grammar-production-PN_CHARS_BASE )
 //
-// The specification seems to have an error in it.
-// As it is missing [0-9], so that was added, too.
-//
 // See also: [ParseLabelString].
 func ParseLabelString(value string) (Label, error) {
 	if "" == value {
@@ -206,6 +200,8 @@ func ParseLabelString(value string) (Label, error) {
 	for index, r := range value {
 		switch {
 		case '_' == r:
+			// nothing here.
+		case          '0' <= r && r <= '9':
 			// nothing here.
 		case '.' == r:
 			// nothing here.
@@ -247,11 +243,6 @@ func ParseLabelString(value string) (Label, error) {
 		case     '\uFDF0' <= r && r <= '\uFFFD':
 			// nothing here.
 		case '\U00010000' <= r && r <= '\U000EFFFF':
-			// nothing here.
-
-
-
-		case          '0' <= r && r <= '9':
 			// nothing here.
 
 
