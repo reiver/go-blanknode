@@ -1,0 +1,16 @@
+codeberg.org/reiver/go-erorr v0.0.0-20260103001947-b254c409f0ce h1:w6RVDeJJWh0aGD6eSGNEggX8EgCDQDFiJWdxxtH7h90=
+codeberg.org/reiver/go-erorr v0.0.0-20260103001947-b254c409f0ce/go.mod h1:JK+FexydwPFzMe6od9T7LAM/SjXxjsbxOP0VHUVJ1VM=
+codeberg.org/reiver/go-field v0.0.0-20251210045308-95aa734b2ef0 h1:zGfFryV4SFmCiK3MKZOk5adG7kIb45bsBvz9SeVI01A=
+codeberg.org/reiver/go-field v0.0.0-20251210045308-95aa734b2ef0/go.mod h1:752EzuARz/8LnYzfPcxBFIIKstqok9fyTUmi5qnjn+Q=
+github.com/reiver/go-calltrace v0.0.0-20251216205616-3931a8c7b154 h1:3w3kacKCTHArAMZenoEO2qssZzJiQ9G8ZJgEvKerbuE=
+github.com/reiver/go-calltrace v0.0.0-20251216205616-3931a8c7b154/go.mod h1:b9j4dbN++ed+soAS/+wSCZ+OsZSm3CWiuzxps8nzkew=
+github.com/reiver/go-erorr v0.0.0-20240801233437-8cbde6d1fa3f h1:D1QSxKHm8U73XhjsW3SFLkT0zT5pKJi+1KGboMhY1Rk=
+github.com/reiver/go-erorr v0.0.0-20240801233437-8cbde6d1fa3f/go.mod h1:F0HbBf+Ak2ZlE8YkDW4Y+KxaUmT0KaaIJK6CXY3cJxE=
+github.com/reiver/go-json v0.0.0-20240809035039-2f83bc2e8c10 h1:LbFL8s+beVbEfnCymQAbRVtG8ihlL67XKvqM17EqGK0=
+github.com/reiver/go-json v0.0.0-20240809035039-2f83bc2e8c10/go.mod h1:ns4kpzbK+OyMUZYT8UmBxrsYWNmvB/irZGmyIh99cxY=
+github.com/reiver/go-lck v0.0.0-20240808133902-b56df221c39f h1:KBVWBoNIM8mHkUR3dP64hm2p2vxoD5xHZ6wUllCjFTc=
+github.com/reiver/go-lck v0.0.0-20240808133902-b56df221c39f/go.mod h1:PFseSi8S0CBkc+YB6jYWtogPk83LumclnYJZZBQJJhs=
+github.com/reiver/go-opt v0.0.0-20240809035328-1ff08dec9bc4 h1:KQ/PDBRaJb69hmMmOs/jM8q679y9v51lY7tjX2FUkog=
+github.com/reiver/go-opt v0.0.0-20240809035328-1ff08dec9bc4/go.mod h1:3lRqhDIwZ4OaMNN6Z5rmHCX8up18IkLGuw2rxP9GrYo=
+github.com/reiver/go-ord v0.0.0-20260222220705-d6aedb3eb0fc h1:xBBwZRmZhwWaAJL09EtMiU41rIwp6y87nKOmPzUtFmk=
+github.com/reiver/go-ord v0.0.0-20260222220705-d6aedb3eb0fc/go.mod h1:OvqfI6FHXeWM5n0x4z3WaA2qhI5j80KFzf8T1XkQqaI=
