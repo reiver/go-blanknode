@@ -107,6 +107,11 @@ func (receiver Identifier) IsNothing() bool {
 	return receiver.label.IsNothing()
 }
 
+// Label returns the blank-node-label for the blank-node-identifier.
+func (receiver Identifier) Label() (Label, bool) {
+	return receiver.label, !receiver.label.IsNothing()
+}
+
 // MarshalText makes [Identifier] fit [encoding.TextMarshaler].
 func (receiver Identifier) MarshalText() (text []byte, err error) {
 	if receiver.label.IsNothing() {
