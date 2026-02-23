@@ -265,6 +265,10 @@ func ParseLabelString(value string) (Label, error) {
 	return someLabel(value), nil
 }
 
+func (receiver Label) Get() (string, bool) {
+	return receiver.optional.Get()
+}
+
 func (receiver Label) IsNothing() bool {
 	return receiver.optional.IsNothing()
 }

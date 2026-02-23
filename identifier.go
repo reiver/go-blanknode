@@ -94,6 +94,15 @@ func ParseIdentifierBytes(value []byte) (Identifier, error) {
 	return ParseIdentifierString(str)
 }
 
+func (receiver Identifier) Get() (string, bool) {
+	label, found := receiver.label.Get()
+	if !found {
+		return "", false
+	}
+
+	return prefix + label, true
+}
+
 func (receiver Identifier) IsNothing() bool {
 	return receiver.label.IsNothing()
 }
